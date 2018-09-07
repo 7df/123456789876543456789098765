@@ -467,3 +467,60 @@ let replies = ["Yes", "No.", "I don't know.", "Ask again later plez."];
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+client.on("message", message => {
+              var args = message.content.substring(prefix.length).split(" ");
+              if (message.content.startsWith(prefix + "cchat")) {
+                  if(!message.channel.guild) return message.reply('**❌ ليس لديك رتبة ادمن **');         
+     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**🚫  MANAGE_MESSAGES ليس لديك رتبة ادمن او بريم 🚫 **');
+          var msg;
+          msg = parseInt(); ///KillerFox AlphaCodes
+        
+        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error); ///KillerFox AlphaCodes
+        message.channel.sendMessage("", {embed: { ///KillerFox AlphaCodes
+          title: "** ➡ تــم مسح الشات ⬅ **",
+          color: 0x06DF00,
+          footer: { ///KillerFox AlphaCodes
+            
+          }
+        }}).then(msg => {msg.delete(10000)});
+                            }
+  
+       
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
