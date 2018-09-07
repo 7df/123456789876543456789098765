@@ -83,7 +83,8 @@ client.on('guildMemberAdd', member => {
             .setThumbnail(memberavatar)
             .addField('🎽 | name :  ',`${member}`)
             .addField('📢 | نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
-            .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
+            .setImage('https://b.top4top.net/p_980agk0m1.jpg')
+			.addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
                     .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                    
                       .addField("Name:",`<@` + `${member.id}` + `>`, true)
@@ -448,6 +449,10 @@ let replies = ["Yes", "No.", "I don't know.", "Ask again later plez."];
   message.channel.send(ballembed);
 }
 });
+
+
+
+
 
 
 
