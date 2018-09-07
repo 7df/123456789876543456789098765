@@ -482,7 +482,7 @@ let replies = ["Yes", "No.", "I don't know.", "Ask again later plez."];
 
 
 client.on("message", message => {
-              var args = message.content.substring(prefix.length).split(" ");
+              var prefix = "$";;
               if (message.content.startsWith(prefix + "cchat")) {
                   if(!message.channel.guild) return message.reply('**❌ ليس لديك رتبة ادمن **');         
      if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**🚫  MANAGE_MESSAGES ليس لديك رتبة ادمن او بريم 🚫 **');
