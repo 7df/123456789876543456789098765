@@ -143,7 +143,7 @@ client.on('message', message => {
   
   ❖ $unmutechannel : تفتح الجات
   
-  ❖ قريبا
+  ❖ $cchat
   
   ❖ قريبا
   
