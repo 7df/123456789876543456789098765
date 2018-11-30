@@ -152,21 +152,14 @@ client.on('message', message => {
 
  ❖ $bc: للنشر لكل اعظاء السيرفر
  
- ❖ $mutechannel : اقلاق الجات
+ ❖ $mutec : اقلاق الجات
   
-  ❖ $unmutechannel : تفتح الجات
+  ❖ $unmutec : تفتح الجات
   
   ❖ $cchat : مسح الجات
   
   ❖ قريبا
   
-  ❖ قريبا
-  
-  ❖ قريبا
-  
-  ❖ قريبا
-  
-  ❖ قريبا
   **
   `);
   
@@ -388,7 +381,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 var prefix = "$";
-       if(message.content === prefix + "mutechannel") {
+       if(message.content === prefix + "mutec") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **__ليس لديك صلاحيات__**');
@@ -400,7 +393,7 @@ var prefix = "$";
               });
                 }
 //FIRE BOT
-    if(message.content === prefix + "unmutechannel") {
+    if(message.content === prefix + "unmutec") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
 
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**__ليس لديك صلاحيات__**');
