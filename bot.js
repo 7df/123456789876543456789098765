@@ -158,7 +158,7 @@ client.on('message', message => {
   
   ❖ $cchat : مسح الجات
   
-  ❖ قريبا
+  ❖ $kick
   
   **
   `);
