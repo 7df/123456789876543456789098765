@@ -539,6 +539,17 @@ client.on ("guildMemberRemove", member => {
 
 
 
+client.on ("guildMemberAdd", member => {
+  
+   var role = member.guild.roles.find ("name", "- Member");
+   member.addRole (role);
+  
+})
+
+client.on ("guildMemberRemove", member => {
+   
+})
+
 
 
 
