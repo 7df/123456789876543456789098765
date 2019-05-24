@@ -230,7 +230,7 @@ client.on('message', message => {
 client.on('message' , message => {
 if (message.content === '$boteideter') {
          let embed = new Discord.RichEmbed()
-.setImage('https://b.top4top.net/p_980agk0m1.jpg')
+.setImage('https://1.top4top.net/p_12397s1ay1.png')
       .addField("**تم تطوير وبرمجه البوت من قبل 🔧 **","** @TnT#5855**")
 .setColor('#B101FC')
   message.author.sendEmbed(embed);
