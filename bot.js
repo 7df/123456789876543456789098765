@@ -466,8 +466,17 @@ let replies = ["Yes", "No.", "I don't know.", "Ask again later plez."];
 
 
 
+client.on('message' , message => {
+if (message.content === '$avatar') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)    
+      .addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
+.setColor('#B101FC')
+  message.author.sendEmbed(embed);
+    }
+});
 
-
+ 
 
 
 
