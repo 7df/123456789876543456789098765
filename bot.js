@@ -483,7 +483,7 @@ let replies = ["Yes", "No.", "I don't know.", "Ask again later plez."];
 
 
 client.on('message' , message => {
-if (message.content === '$avatar') {
+if (message.content === '$صورتي') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
 .setColor('#B101FC')
