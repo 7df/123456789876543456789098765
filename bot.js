@@ -251,7 +251,22 @@ if (message.content === '$boteideter') {
 
 
 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('زق')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا تنشر",
+        color: 0x06DF00,
+        description: "الفاظك",
+        footer: {
+          text: "By TnT"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
 
+     
+}); 
 
 
 
