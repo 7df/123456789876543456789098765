@@ -256,7 +256,7 @@ client.on('message', message => {
     if(message.content.includes('زق')){
         message.delete()
       message.channel.sendMessage("", {embed: {
-        title: "لا تنشر",
+        title: "انت",
         color: 0x06DF00,
         description: "الفاظك",
         footer: {
