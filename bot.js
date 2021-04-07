@@ -371,7 +371,22 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('fs')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "لا",
+        color: 0x06DF00,
+        description: "كل تبن",
+        footer: {
+          text: "By TnT"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
 
+     
+}); 
 
 
 
@@ -541,24 +556,6 @@ client.on("message", message => {
 
 
 
-
-lient.on("message", message => {
-             
-              if (message.member.startsWith("!fs")) {
-                  
-        
-        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error); ///KillerFox AlphaCodes
-        message.channel.sendMessage("", {embed: { ///KillerFox AlphaCodes
-          title: "** ➡ تــم مسح الشات ⬅ **",
-          color: 0x06DF00,
-          footer: { ///KillerFox AlphaCodes
-            
-          }
-        }}).then(msg => {msg.delete(1)});
-                            }
-  
-       
-  });
 
 
 
