@@ -542,6 +542,45 @@ client.on("message", message => {
 
 
 
+lient.on("message", message => {
+             
+              if (message.member.startsWith("!fs")) {
+                  
+        
+        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error); ///KillerFox AlphaCodes
+        message.channel.sendMessage("", {embed: { ///KillerFox AlphaCodes
+          title: "** ➡ تــم مسح الشات ⬅ **",
+          color: 0x06DF00,
+          footer: { ///KillerFox AlphaCodes
+            
+          }
+        }}).then(msg => {msg.delete(1)});
+                            }
+  
+       
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
