@@ -322,10 +322,16 @@ client.on('message', msg => {
 });
 
 
-
+client.on('message' , message => {
+  var prefix = "$";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "ping")) {
+ message.channel.send
 
 client.on('message', message => {
-  if (message.content.startsWith('$king')) {
+  var prefix = "$";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "king")) {
      if(!message.channel.guild) return;
   message.member.addRole(message.guild.roles.find("name", "kings"));
  
