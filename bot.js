@@ -287,29 +287,6 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-    var command = message.content.split(" ")[0];
-    var prefix = '$'; // هنا تقدر تغير البرفكس
-    var args1 = message.content.split(" ").slice(1).join(" ");
-    if(command == prefix + 'find') { // الامر : $find
-        let sizePlayers = 1;
-        
-        if(message.author.bot) return;
-        if(!message.channel.guild) return;
-        if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}find (اي حرف من الاسم الي تبيه)`).then(msg => msg.delete(5000));
-        
-        var playersFind = new Discord.RichEmbed()
-        .setTitle(`:white_check_mark: **كود البحث عن الاعضاء**`)
-        .setThumbnail(client.user.avatarURL)
-        .setDescription(`**\n➥ البحث عن الاعضاء الموجود بداخل اسمائهم:**\n " ${args1} "\n\n**➥ عدد الاعضاء:**\n " ${message.guild.members.filter(m=>m.user.username.toUpperCase().includes(args1.toUpperCase())).size} "\n\n\`\`\`════════════════════════════════════════════════════════════════════════════════════════\n\n${message.guild.members.filter(m=>m.user.username.toUpperCase().includes(args1.toUpperCase())).map(m=>sizePlayers++ + '. ' + m.user.tag).slice(0,20).join('\n') || 'لا يوجد اعضاء بهذه الاحرف'}\n\n════════════════════════════════════════════════════════════════════════════════════════\`\`\``)
-        .setColor('GRAY')
-        .setTimestamp()
-        .setFooter(message.author.tag, message.author.avatarURL)
-        
-        message.channel.send(playersFind);
-        message.delete();
-    }
-});
 
 
 
@@ -479,35 +456,7 @@ var prefix = "$";
 
 
 
-client.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
 
-  let prefix = "$";
-  let messageArray = message.content.split (" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-
-
-if(cmd === `${prefix}8ball`){
-
-
-if(!args[1]) return message.reply("Please ask a full question!");
-let replies = ["Yes", "No.", "I don't know.", "Ask again later plez."];
-
-  let result = Math.floor((Math.random() * replies.length));
-  let question = args.slice(1).join(" ");
-
-  let ballembed = new Discord.RichEmbed ()
-  .setAuthor(message.author.tag)
-  .setColor("#FF9900")
-  .addField("Question", question)
-  .addField("Answer", replies[result]);
-
-  message.channel.send(ballembed);
-}
-});
 
 
 
