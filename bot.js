@@ -662,6 +662,20 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
+  if (message.content.startsWith('1')) {
+     if(!message.channel.guild) return;
+  message.member.addRole(message.guild.roles.find("name", "kings"));
+ 
+ }
+ });
+
+client.on('ready', () => {
+console.log("ALPHACODESS");
+});
+
+
+
 
 
 
