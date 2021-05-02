@@ -604,7 +604,7 @@ client.on("message", message => {
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "bro");
+   var role = member.guild.roles.find ("name", "pro");
    member.addRole (role);
   
 })
