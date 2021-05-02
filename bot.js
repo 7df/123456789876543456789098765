@@ -325,7 +325,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-  if (message.content.startsWith('max')) {
+  if (message.content.startsWith('$max')) {
      if(!message.channel.guild) return;
   message.member.addRole(message.guild.roles.find("name", "max"));
  
@@ -339,7 +339,7 @@ console.log("ALPHACODESS");
 
 
 client.on('message', msg => {
-  if (msg.content === 'max') {
+  if (msg.content === '$max') {
     msg.reply('done');
   }
 });
@@ -349,7 +349,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-  if (message.content.startsWith('king')) {
+  if (message.content.startsWith('$king')) {
      if(!message.channel.guild) return;
   message.member.addRole(message.guild.roles.find("name", "kings"));
  
@@ -363,7 +363,7 @@ console.log("ALPHACODESS");
 
 
 client.on('message', msg => {
-  if (msg.content === 'king') {
+  if (msg.content === '$king') {
     msg.reply('done');
   }
 });
@@ -684,17 +684,6 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-  if (message.content.startsWith('1')) {
-     if(!message.channel.guild) return;
-  message.member.addRole(message.guild.roles.find("name", "kings"));
- 
- }
- });
-
-client.on('ready', () => {
-console.log("ALPHACODESS");
-});
 
 
 
