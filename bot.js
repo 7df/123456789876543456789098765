@@ -324,12 +324,50 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
+  if (message.content.startsWith('max')) {
+     if(!message.channel.guild) return;
+  message.member.addRole(message.guild.roles.find("name", "max"));
+ 
+ }
+ });
+
+client.on('ready', () => {
+console.log("ALPHACODESS");
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'max') {
+    msg.reply('done');
+  }
+});
+  
 
 
 
 
+client.on('message', message => {
+  if (message.content.startsWith('king')) {
+     if(!message.channel.guild) return;
+  message.member.addRole(message.guild.roles.find("name", "kings"));
+ 
+ }
+ });
+
+client.on('ready', () => {
+console.log("ALPHACODESS");
+});
 
 
+
+client.on('message', msg => {
+  if (msg.content === 'king') {
+    msg.reply('done');
+  }
+});
+  
 
 
 
@@ -371,22 +409,6 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('fs')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا",
-        color: 0x06DF00,
-        description: "كل تبن",
-        footer: {
-          text: "By TnT"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
 
 
 
