@@ -322,11 +322,6 @@ client.on('message', msg => {
 });
 
 
-client.on('message' , message => {
-  var prefix = "$";
-  if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "ping")) {
- message.channel.send
 
 client.on('message', message => {
   var prefix = "$";
@@ -345,7 +340,7 @@ console.log("ALPHACODESS");
 
 
 client.on('message', msg => {
-  if (msg.content === '$king') {
+  if (msg.content === 'king') {
     msg.reply('done');
   }
 });
