@@ -26,130 +26,16 @@ client.user.setStatus("dnd");
 
 
 
+client.on('message' , message => {
+  var prefix = "$";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "ping")) {
+ message.channel.send('Pong...').then((msg) => {
+      msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);
+ })
+  }  
+ });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-client.on('guildMemberAdd', member => {
-        let channel = member.guild.channels.find('name', 'welcome✋');
-        let memberavatar = member.user.avatarURL
-          if (!channel) return;
-        let embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setThumbnail(memberavatar)
-            .addField('🎽 | name :  ',`${member}`)
-            .addField('📢 | نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
-            .setImage('https://b.top4top.net/p_980agk0m1.jpg')
-			.addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
-                    .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-                   
-                      .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                         
-                                         .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                           
-         .setFooter(`${member.guild.name}`)
-            .setTimestamp()
-       
-          channel.sendEmbed(embed);
-        });
-        
-        client.on('guildMemberRemove', member => {
-            var embed = new Discord.RichEmbed()
-            .setAuthor(member.user.username, member.user.avatarURL)
-            .setThumbnail(member.user.avatarURL)
-            .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
-            .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
-            .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-            .setColor('RED')
-            .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
-        
-        var channel =member.guild.channels.find('name', 'سجلات')
-        if (!channel) return;
-        channel.send({embed : embed});
-        })
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-client.on('message', message => {
-      if (message.author.bot) return;
-      var prefix ="$"
-       if (message.content === prefix + "help-admin") {
-        if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
-       message.channel.send('**تم ارسال رسالة في الخاص**');
-  
-  
-  
-  
-   message.author.sendMessage(`
-   **
-  [❖═════اومر ادمن═══════❖]
-
- ❖ $bc: للنشر لكل اعظاء السيرفر
- 
- ❖ $mutec : اقلاق الجات
-  
-  ❖ $unmutec : تفتح الجات
-  
-  ❖ $cchat : مسح الجات
-  
-  ❖ $kick : طرد
-  
-  ❖ $ban : حظر
-
-  ❖ $cr-colors : صنع جميع الوان
-
-  ❖ $del-colors : حذف جميع الالوان
-
-
-
-  **
-  `);
-  
-      }
-  });
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   client.on("message", msg => {
   if(msg.content === '$' + "id") {
@@ -169,62 +55,6 @@ client.on('message', message => {
       msg.channel.send({embed: embed})
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
